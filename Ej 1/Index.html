@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PROGRAMACIÓN</h1>
+    </header>
+    <main>
+        <section id="inicio" class="contenedor visible">
+            <button onclick="mostrarSeccion('HTML')">HTML</button>
+            <button onclick="mostrarSeccion('CSS')">CSS</button>
+            <button onclick="mostrarSeccion('JAVASCRIPT')">JAVASCRIPT</button>
+            <button onclick="mostrarSeccion('JAVA')">JAVA</button>
+        </section>
+        <section id="HTML" class="contenedor"> 
+            <h2>HTML:Etiquetas</h2>
+            <ol>
+                <li>Head</li>
+                <li>Header</li>
+                <li>Boddy</li>
+            </ol>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <section id="CSS" class="contenedor">
+            <h2>CSS:propioedades</h2>
+            <ul>
+                <li>Font-family</li>
+                <li>Background-color</li>
+                <li>Border</li>
+            </ul>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <section id="JAVASCRIPT" class="contenedor">
+            <h2>JAVASCRIPT: SCRIPT</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pros</th>
+                        <th>Contras</th>
+                        <th>Caracteristicas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lenguaje de programación interpretado y dinámico.</td>
+                        <td>Puede ser lento en tareas complejas.</td>
+                        <td>Compatible con objetos, funciones y eventos.</td>
+                    </tr>
+                    <tr>
+                        <td>Amplio soporte en todos los navegadores.</td>
+                        <td>Es fácil cometer errores debido a su naturaleza flexible.</td>
+                        <td>Se ejecuta en el navegador y en el servidor (Node.js)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <section id="JAVA" class="contenedor">
+            <h2>JAVA: Formulario</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text" required>
+                <label for="email">Correo Electrónico:</label>
+                <input id="email" name="email" type="email" required>
+                <fieldset>
+                    <legend>Género:</legend>
+                    <label><input name="genero" type="radio" value="masculino"> Masculino</label>
+                    <label><input name="genero" type="radio" value="femenino"> Femenino</label>
+                </fieldset>
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="mx">México</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="es">España</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Derechos Reservados</p>
+    </footer>
+    <script>
+        function mostrarSeccion(seccionId) {
+            document.querySelectorAll('.contenedor').forEach((seccion) => {
+                seccion.classList.remove('visible');
+            });
+            document.getElementById(seccionId).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
